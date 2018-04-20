@@ -78,7 +78,7 @@ class ViewController: UIViewController, LiquidFloatingActionButtonDataSource, Li
 //        self.view.backgroundColor = UIColor(red: 55 / 255.0, green: 55 / 255.0, blue: 55 / 255.0, alpha: 1.0)
         // Do any additional setup after loading the view, typically from a nib.
         let createButton: (CGRect, LiquidFloatingActionButtonAnimateStyle) -> LiquidFloatingActionButton = { (frame, style) in
-            let floatingActionButton = CustomDrawingActionButton(frame: frame)
+            let floatingActionButton = LiquidFloatingActionButton(frame: frame)
             floatingActionButton.animateStyle = style
             floatingActionButton.dataSource = self
             floatingActionButton.delegate = self
@@ -100,8 +100,8 @@ class ViewController: UIViewController, LiquidFloatingActionButtonDataSource, Li
         let floatingFrame = CGRect(x: self.view.frame.width - 56 - 16, y: self.view.frame.height - 56 - 16, width: 56, height: 56)
         let bottomRightButton = createButton(floatingFrame, .up)
         
-        let image = UIImage(named: "ic_art")
-        bottomRightButton.image = image
+//        let image = UIImage(named: "ic_art")
+//        bottomRightButton.image = image
         
         let floatingFrame2 = CGRect(x: 16, y: 16, width: 56, height: 56)
         let topLeftButton = createButton(floatingFrame2, .down)
